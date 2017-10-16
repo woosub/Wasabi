@@ -2,15 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Character : MonoBehaviour {
-
+public class Character : Unit
+{
     const float jumpPower = 8.0f;
     const float gravity = 18.0f;
-
-    bool isJump = false;
-    bool isAttack = false;
-
+    
     Animation mAni;
+
+    //camera dummy test
+    public Camera mainCam;
+    public Color defaultColor;
+    public Color testColor;
+    //>
 
     public Transform toeL;
     public Transform toeR;
@@ -28,9 +31,22 @@ public class Character : MonoBehaviour {
 
     Color defaultShadowColor;
 
-    // Use this for initialization
-    void Start () {
-        Application.runInBackground = true;
+    GameObject character;
+
+    public void TestCameraColor(Color color)
+    {
+        mainCam.backgroundColor = color;
+    }
+
+    public override void Init()
+    {
+        base.Init();
+
+        //Test
+        defaultColor = mainCam.backgroundColor;
+        //>
+
+        character = GameObject.Find(WasabiStrings.Character.Wasabi);
 
         mAni = GetComponentInChildren<Animation>();
 
@@ -41,10 +57,30 @@ public class Character : MonoBehaviour {
         ShadowRRender = ShadowR.GetComponent<Renderer>();
 
         defaultShadowColor = Color.black;
+        
+        stateMachine.Add(UnitState.Idle, new Unit_Idle());
+        stateMachine.Add(UnitState.Run, new Unit_Run(gameObject));
+        stateMachine.Add(UnitState.Jump, new Unit_Jump(jumpPower, gravity, transform));
+        stateMachine.Add(UnitState.Die, new Unit_Die());
+        stateMachine.Add(UnitState.Attack_1, new Unit_Attack1(character));
+        stateMachine.Add(UnitState.Attack_2, new Unit_Attack2(character));
+        stateMachine.Add(UnitState.Strike, new Unit_Strike(gameObject));
+        
+        currentState = UnitState.Run;
+        ChangeState(currentState);
+    }
+    
+    // Use this for initialization
+    void Start () {
+        Application.runInBackground = true;
+
+        Init();
     }
 
     // Update is called once per frame
     void Update() {
+
+        UpdateUnit();
 
         if (Physics.Raycast(toeL.position, Vector3.down, out hit))
         {
@@ -74,43 +110,5 @@ public class Character : MonoBehaviour {
             }
         }
 
-    } 
-
-    public void Jump()
-    {
-        if (isJump)
-            return;
-
-        isJump = true;
-
-        StartCoroutine(Jumping());
-    }
-
-    IEnumerator Jumping()
-    {
-        float jumpVal = jumpPower;
-
-        while (true)
-        {
-            jumpVal -= gravity * Time.deltaTime;
-
-            transform.position += new Vector3(0, jumpVal * Time.deltaTime);
-
-            if (transform.localPosition.y <= 0.0f)
-            {
-                break;
-            }
-
-            yield return null;
-        }
-
-        transform.localPosition = Vector3.zero;
-        isJump = false;
-    }
-
-    public void Attack()
-    {
-        isAttack = true;
-        //mAni.CrossFade()
     }
 }

@@ -12,6 +12,9 @@ Shader "Wasabi/EffectShader" {
 			[MaterialToggle] _Eff1("On_Eff1", Float) = 0
 			_Color2("EffectColor_2", Color) = (0.0, 0.0, 0.0, 1.0)
 			[MaterialToggle] _Eff2("On_Eff2", Float) = 0
+
+			[MaterialToggle] _Strike("On_Strike", Float) = 0
+			_StrikeVal("StrikeValue", Float) = 0
 	}
 	SubShader {
 		Tags { "RenderType"="Opaque" }
@@ -41,6 +44,8 @@ Shader "Wasabi/EffectShader" {
 		float _Eff0;
 		float _Eff1;
 		float _Eff2;
+		float _Strike;
+		float _StrikeVal;
 
 		fixed4 LightingNoLighting(SurfaceOutput s, fixed3 lightDir, fixed atten)
 		{
@@ -52,7 +57,13 @@ Shader "Wasabi/EffectShader" {
 
 		void vert(inout appdata_full v)
 		{
-			//v.vertex.y += 10;
+			if (_Strike == 1)
+			{
+				if ((v.vertex.x > 0.0 && v.vertex.x < 0.5) && (v.normal.x > 0.05 && v.normal.x < 0.15))
+				{
+					v.vertex.x += _StrikeVal;
+				}
+			}
 		}
 
 		void surf(Input IN, inout SurfaceOutput o) 

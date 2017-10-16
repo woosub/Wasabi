@@ -33,6 +33,8 @@ public class PlayerController : MonoBehaviour {
         //    playEvent.Reset();
         //}
 
+
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             character.Jump();
@@ -41,6 +43,11 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Q))
         {
             character.Attack();
+        }
+
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            character.Strike();
         }
     }
 

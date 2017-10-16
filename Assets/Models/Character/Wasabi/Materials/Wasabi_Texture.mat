@@ -8,7 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: Wasabi_Texture
   m_Shader: {fileID: 4800000, guid: bf498fc113c80b44e8f90959b81a2c5c, type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: _EFF0_ON _EFF1_ON _EFF2_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -63,9 +63,9 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _Eff0: 0
-    - _Eff1: 0
-    - _Eff2: 0
+    - _Eff0: 1
+    - _Eff1: 1
+    - _Eff2: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -76,12 +76,14 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
+    - _Strike: 0
+    - _StrikeVal: 0
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 0.5882353, g: 0.5882353, b: 0.5882353, a: 1}
     - _Color0: {r: 0.39607847, g: 0, b: 0, a: 1}
     - _Color1: {r: 0.39705884, g: 0, b: 0, a: 1}
-    - _Color2: {r: 0.9034482, g: 1, b: 0, a: 1}
+    - _Color2: {r: 0, g: 0, b: 0, a: 1}
     - _DefaultShadowColor: {r: 0.52205884, g: 0.52205884, b: 0.52205884, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
