@@ -3,7 +3,7 @@ guid: 5cde509227aafdc4d8982efe82567edf
 timeCreated: 1517474866
 licenseType: Free
 ModelImporter:
-  serializedVersion: 22
+  serializedVersion: 21
   fileIDToRecycleName:
     100000: Bip001
     100002: Bip001 Footsteps
@@ -201,35 +201,14 @@ ModelImporter:
     4300006: Ebimaru
     7400000: Take 001
     9500000: //RootNode
+    11100000: //RootNode
     13700000: Ebimaru
     13700002: Ebimaru_Eye
     13700004: Ebimaru_Mouth
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 03 - Default
-    second: {fileID: 2100000, guid: 077e448a71dfd3a489eb53f04aa2da36, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Ebimaru
-    second: {fileID: 2100000, guid: e3c27adaf88e6554d95cc3a40bad58ce, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Eye
-    second: {fileID: 2100000, guid: 35a165b52adba6c44ab10ff2ee422ec8, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: No Name
-    second: {fileID: 2100000, guid: a38751b0013805541823b793c2eb645c, type: 2}
   materials:
     importMaterials: 0
     materialName: 0
     materialSearch: 1
-    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -242,7 +221,6 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    importAnimatedCustomProperties: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -293,10 +271,10 @@ ModelImporter:
     rootMotionBoneName: 
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
