@@ -1658,15 +1658,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1367817098147572}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.408}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4883698816194508}
   - {fileID: 4392754703115626}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!4 &4169417620511512
 Transform:
   m_ObjectHideFlags: 1
@@ -2755,7 +2755,6 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2771,7 +2770,6 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -2812,7 +2810,7 @@ Animation:
   m_GameObject: {fileID: 1367817098147572}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 46e121f3f4591dd41b963066fb6f9517, type: 3}
+  m_Animation: {fileID: 7400000, guid: 5f5bed5c746a03f45af68d7db0526385, type: 3}
   m_Animations:
   - {fileID: 7400000, guid: 5f5bed5c746a03f45af68d7db0526385, type: 3}
   - {fileID: 7400000, guid: 2428f8522ce3e9f4287a1797cb7f0d70, type: 3}
@@ -2853,7 +2851,12 @@ Animation:
   m_Enabled: 1
   serializedVersion: 3
   m_Animation: {fileID: 0}
-  m_Animations: []
+  m_Animations:
+  - {fileID: 7400000, guid: 4478f3cb7e64aeb4b92987bd8ab957c1, type: 3}
+  - {fileID: 7400002, guid: 4478f3cb7e64aeb4b92987bd8ab957c1, type: 3}
+  - {fileID: 7400004, guid: 4478f3cb7e64aeb4b92987bd8ab957c1, type: 3}
+  - {fileID: 7400006, guid: 4478f3cb7e64aeb4b92987bd8ab957c1, type: 3}
+  - {fileID: 7400008, guid: 4478f3cb7e64aeb4b92987bd8ab957c1, type: 3}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -2867,7 +2870,6 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2883,7 +2885,6 @@ SkinnedMeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -2913,7 +2914,6 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2929,7 +2929,6 @@ SkinnedMeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -2959,7 +2958,6 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2975,7 +2973,6 @@ SkinnedMeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
